@@ -1,7 +1,8 @@
 <!DOCTYPE html> 
 <html>
-	<?php include 'assets/php/auth.php'?>
+	<?php include 'assets/php/auth.php' ?>
 	<?php include 'assets/web/header.web' ?>
+	<?php include 'assets/php/ip.php' ?>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body>
@@ -25,7 +26,12 @@
 			<?php if($status != "") echo $status ?>
 			</div>
 			<div>
-			<a href="newAccount.php">Setup an account</a>
+				<?php if ($valid): ?>
+					<a href="newAccount.php">Setup an account</a>	
+				<?php else: ?>
+					<a href="noGo.php">Setup an account</a>
+				<?php endif; ?>
+			
 			</div>
 		</main>
 		<footer>

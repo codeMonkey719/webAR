@@ -2,6 +2,7 @@
 <html>
 	<?php include 'assets/web/header.web' ?>
 	<?php include 'assets/php/config.php' ?>
+	<?php include 'assets/php/createdb.php' ?>
 	</head>
 	<body>
 		<header>

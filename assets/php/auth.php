@@ -4,7 +4,7 @@ session_start();
 
 require_once "lib/passwordLib.php";
 
-$info = "P1";
+$info = "P2";
 $user = $pswd = $status = "";
 
 

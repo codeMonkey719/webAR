@@ -1,7 +1,9 @@
 <!DOCTYPE html> 
 <html>
+	<?php //include 'assets/php/auth.php' ?>
 	<?php include 'assets/web/header.web' ?>
 	<?php include 'assets/php/config.php' ?>
+	<?php include 'assets/php/ip.php' ?>
 	</head>
 	<body>
 		<header>
@@ -37,6 +39,24 @@
 						All fields marked with a * are needed to sign up!
 						<br><input type="submit" value="Submit"><br><br>
 					</form>
+
+				<?php 
+					try {
+						$dbh = new PDO("sqlite:./galactic.db");
+						echo 'Connection successful.';
+						$sql = "INSERT INTO user VALUES	
+							(11, '$', 'ursaminordwarf.jpg', .506);";
+						$status = $dbh->exec($sql);
+					
+					} catch (PDOException $e) {
+						/* If you get here it is mostly a permissions issue
+						 * or that your path to the database is wrong
+						 */
+						echo 'Connection failed: ' . $e->getMessage();
+						die;
+					}
+					//echo $fname;
+				?>
 			</div>
 			</main>
 		<footer>
