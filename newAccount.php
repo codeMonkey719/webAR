@@ -1,39 +1,51 @@
 <!DOCTYPE html> 
 <html>
-	<?php //include 'assets/php/auth.php' ?>
+	
 	<?php include 'assets/web/header.web' ?>
 	<?php include 'assets/php/config.php' ?>
-	<?php include 'assets/php/ip.php' ?>
+
 	</head>
 	<body>
 		<header>
 		<?php include 'assets/php/nav.php' ?>
+
 		</header>
+
 			<main>
-			
+				<?php include 'assets/php/auth2.php' ?>
 			<div id="signup">
-				<h3>Sign up!</h3>                
+				<h3>Sign up!</h3>  
+
 					<form action="#" method="post" autocomplete="off">
-						<b>First Name*  </b><br><input  type="text" name="fname"><br>
-						<b>Middle Name  </b><br><input type="text" name="mname"><br>
-						<b>Last Name* </b><br><input type="text" name="lname"><br>
-						<b>Phone Number* </b><br><input type="text" name="pnumber"><br>
-						<b>Email* </b><br><input type="text" name="email"><br>
-						<b>User Name* </b><br><input type="text" name="user"><br>
-						<b>Password* </b><br><input type="password" name="pswd"><br>
-						<b>Password Again* </b><br><input type="password" name="pswd2"><br>
+						<b>First Name*  </b><br><input  type="text" name="fname" 
+							value="<?php if (isset($_POST["fname"])){echo $fname;} ?>"><br>
+						<b>Middle Name  </b><br><input type="text" name="mname"
+							value="<?php if (isset($_POST["fname"])){echo $mname;} ?>"><br>
+						<b>Last Name* </b><br><input type="text" name="lname"
+							value="<?php if (isset($_POST["fname"])){echo $lname;} ?>"><br>
+						<b>Phone Number* </b><br><input type="text" name="pnumber"
+							value="<?php if (isset($_POST["fname"])){echo $pnumber;} ?>"><br>
+						<b>Email* </b><br><input type="text" name="email"
+							value="<?php if (isset($_POST["fname"])){echo $email;} ?>"><br>
+						<b>User Name* </b><br><input type="text" name="user"
+							value="<?php if (isset($_POST["fname"])){echo $user;} ?>"><br>
+						<b>Password* </b><br><input type="password" name="pswd"
+							value="<?php if (isset($_POST["fname"])){echo $pswd;} ?>"><br>
+						<b>Password Again* </b><br><input type="password" name="pswd2"
+							value="<?php if (isset($_POST["fname"])){echo $pswd2;} ?>"><br>
 						<br><b><u>Prior Pets</u></b>
-						<blockquote><tab to="INDENT"><input type="checkbox" name="dogs" > Dogs<br>
-						<input type="checkbox" name="vehicle" value="Car" checked> Cats<br>						
-						<input type="checkbox" name="vehicle" value="Bike"> Quasars<br>
-						<input type="checkbox" name="vehicle" value="Bike"> Stars<br>
+						<blockquote><tab to="INDENT">
+						<input type="checkbox" name="dogs" > Dogs<br>
+						<input type="checkbox" name="cats"  > Cats<br>						
+						<input type="checkbox" name="quasars" > Quasars<br>
+						<input type="checkbox" name="stars" > Stars<br>
 						</blockquote>
-						<b>Are you interested in fostering a pet? </b><br>
-						<input type="radio" name="vehicle" value="Bike"> Yes
-						<input type="radio" name="vehicle" value="Bike"> No<br><br>
-						<b>Do you have a pet needing a home?</b><br>
-						<input type="radio" name="vehicle" value="Bike"> Yes
-						<input type="radio" name="vehicle" value="Bike"> No<br><br>
+						<b>Are you interested in fostering a Galaxy? </b><br>
+						<input type="radio" name="choice1" value="inter"> Yes
+						<input type="radio" name="choice1" value="inter"> No<br><br>
+						<b>Do you have a Galaxy needing rescued?</b><br>
+						<input type="radio" name="choice2" value="need"> Yes
+						<input type="radio" name="choice2" value="need"> No<br><br>
 						<b>If yes to above, please explain</b><br>
 						<textarea rows="10" cols="55" name="explain"></textarea><br><br>
 						All fields marked with a * are needed to sign up!
@@ -41,21 +53,35 @@
 					</form>
 
 				<?php 
-					try {
-						$dbh = new PDO("sqlite:./galactic.db");
-						echo 'Connection successful.';
-						$sql = "INSERT INTO user VALUES	
-							(11, '$', 'ursaminordwarf.jpg', .506);";
-						$status = $dbh->exec($sql);
-					
-					} catch (PDOException $e) {
-						/* If you get here it is mostly a permissions issue
-						 * or that your path to the database is wrong
-						 */
-						echo 'Connection failed: ' . $e->getMessage();
-						die;
+					$date = `date +%s`%50500;
+					//echo "$date<br>";
+					//echo $validForm;
+					if($validForm == 1){
+
+						try {
+							$dbh = new PDO("sqlite:./galactic.db");
+							//echo "STATUS: $status";			
+							echo "$date<br>";
+							//$sql = "SELECT * FROM users;";
+							//touch 
+							//$dbh->exec($sql) > ;
+							// echo $results;
+							$sql = "INSERT INTO users VALUES($date, '$fname', '$mname', '$lname',
+								'$pnumber', '$email', '$user');";
+								//($date, '$fname', '$mname', '$lname', '$pnumber', '$email', '$user');";
+								//(1    , 'Ross',   'Smith', 'Beverage', '9702223333', 'ross@gmail.com', 'rBev');
+							$dbh->exec($sql);
+							//echo "STATUS: $status<br>";
+						} catch (PDOException $e) {
+							/* If you get here it is mostly a permissions issue
+							 * or that your path to the database is wrong
+							 */
+							echo 'Connection failed: ' . $e->getMessage();
+							die;
+						}
+						echo "\n";
+						//echo "$fname";
 					}
-					//echo $fname;
 				?>
 			</div>
 			</main>

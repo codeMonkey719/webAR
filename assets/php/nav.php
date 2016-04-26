@@ -18,7 +18,7 @@ if (isset($_SESSION["user"])) {
 	<li><a href="about.php">About</a></li>
 	<?php if ($login != "Guest"): ?>
 	<li>Account: <a href="account.php"> <?php echo "$login" ?></a></li>
-	<li><a href="assets/php/postGal.php">Post a Galaxy</a></li>
+	<li><a href="postGal.php">Post a Galaxy</a></li>
 	<li><a href="assets/php/logout.php">Logout</a></li>
 	<?php else: ?>
 	<li><a href="login.php">Login</a></li>

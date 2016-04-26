@@ -6,6 +6,7 @@ require_once "lib/passwordLib.php";
 
 $info = "P2";
 $user = $pswd = $status = "";
+//$fname = $mname = $lname = $pnumber = $email = $user = $pswd = $pswd2 = $status = "";
 
 
 if (isset($_SESSION["user"])) {
@@ -16,16 +17,20 @@ if (isset($_SESSION["user"])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $fname = test_input( $_POST["fname"] );
-    $mname = test_input( $_POST["mname"] );
-    $lname = test_input( $_POST["lname"] );
-    $pnumber = test_input( $_POST["pnumber"] );
-    $email = test_input( $_POST["email"] );
+    // $fname = test_input( $_POST["fname"] );
+    // $mname = test_input( $_POST["mname"] );
+    // $lname = test_input( $_POST["lname"] );
+    // $pnumber = test_input( $_POST["pnumber"] );
+    // $email = test_input( $_POST["email"] );
     $user = test_input( $_POST["user"] );
     $pswd = test_input( $_POST["pswd"]);
-    $pswd2 = test_input( $_POST["pswd2"]);
+    //$pswd2 = test_input( $_POST["pswd2"]);
     //Add other fields from sign up form
 }
+
+// if($fname!=""){
+//     echo $fname;
+// }
 
 $myfile = fopen("assets/info/users.csv", "r") or die("Unable to open file!");
 

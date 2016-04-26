@@ -11,11 +11,16 @@
 			<main>
 			
 			<div id="signup">
-				<h3>You're a sketchy bastard, you can't create an account!</h3>                
-				
-
-		
+				<h3><center>I'm sorry, this IP address does not pass our validation.<br><br>
+				 Have a nice day!</h3>  
+				 
 			</div>
+			<div>
+<!-- 				start=82
+ -->					 <iframe align="middle" width="420" height="315" 
+					 src="https://www.youtube.com/embed/vTIIMJ9tUc8?autoplay=1&start=82" frameborder="0" 
+					 allowfullscreen ></iframe>              
+				<div>
 			</main>
 		<footer>
 		<?php include 'assets/php/end.php' ?>

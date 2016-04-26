@@ -1,13 +1,13 @@
 <?php
 try {
 	$dbh = new PDO("sqlite:./galactic.db");
-	echo 'Connection successful.';
+	//echo 'Connection successful.';
 	
 	//Creates a users table
 	$sql = "DROP TABLE IF EXISTS users;";
 	$status = $dbh->exec($sql);
-	$sql = "CREATE TABLE users (
-	 		 uid int(5) NOT NULL,
+	$sql = "CREATE TABLE IF NOT EXISTS users (
+	 		 uid int(50000) NOT NULL,
 	 		 fname varchar(255), mname varchar(255),
 	 		 lname varchar(255), pnumber varchar(15), 
 	 		 email varchar(255),
@@ -21,7 +21,7 @@ try {
 			INSERT INTO users VALUES
 			(2, 'Richie', 'Luise', 'Smythe', '1236668989', 'olRichie@gmail.com', 'rBev'); 
 			INSERT INTO users VALUES
-			(3, 'Ross', 'Smith', 'Beverage', '9702223333', 'ross@gmail.com', 'rBev'); 
+			(3, 'Bob', 'BIG-TONY', 'Baluseky', '9702229999', 'danBT@gmail.com', 'dBT'); 
 			 ";
 			//(2, 'Roger', 'Lawrence', 'Rabbit', '9703334444', 'roger@gmail.com', 'rRab')
 			  
@@ -30,9 +30,9 @@ try {
 	$status = $dbh->exec($sql);
 
 	//Creates a galaxies table
-	$sql = "DROP TABLE IF EXISTS galaxies;";
-	$status = $dbh->exec($sql);
-	$sql = "CREATE TABLE galaxies (
+	// $sql = "DROP TABLE IF EXISTS galaxies;";
+	// $status = $dbh->exec($sql);
+	$sql = "CREATE TABLE IF NOT EXISTS galaxies (
 	 		 gid int(5) NOT NULL,
 	 		 galName varchar(255),
 	 		 galaxy_img varchar(255), 
@@ -71,7 +71,7 @@ try {
 		print_r($dbh->errorInfo());
 		
 	}else{
-		echo "Done.";
+		//echo "Done.";
 	}
 } catch (PDOException $e) {
 	/* If you get here it is mostly a permissions issue

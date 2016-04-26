@@ -27,7 +27,8 @@
 			</div>
 			<div>
 				<?php if ($valid): ?>
-					<a href="newAccount.php">Setup an account</a>	
+					<a href="newAccount.php">Setup an account</a><br>
+					<a href="forgotPass.php">Forgot my password<a>	
 				<?php else: ?>
 					<a href="noGo.php">Setup an account</a>
 				<?php endif; ?>
