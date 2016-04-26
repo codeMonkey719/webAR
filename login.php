@@ -26,7 +26,7 @@
 			<?php if($status != "") echo $status ?>
 			</div>
 			<div>
-				<?php if ($valid): ?>
+				<?php if (!$valid): ?>
 					<a href="newAccount.php">Setup an account</a><br>
 					<a href="forgotPass.php">Forgot my password<a>	
 				<?php else: ?>
