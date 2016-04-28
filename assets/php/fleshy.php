@@ -1,12 +1,13 @@
 <!DOCTYPE html> 
 <html>
-<?php include 'assets/web/header.web' ?>
-<?php include 'assets/php/config.php' ?>
+<?php include '../web/header.web' ?>
+<?php include '../php/config.php' ?>
+<?php include '../lib/database.php' ?>
 </head>
 
 	<body>
 		<header>
-		<?php include 'assets/php/nav.php' ?>
+		<?php include '../php/nav.php' ?>
 		</header>
 		<main>
 			<h3>Galaxies</h3>
@@ -91,7 +92,7 @@ They were made from UK Schmidt plates by David Malin. -->
 			</div>
 			
 			    <?php
-				    $db = new PDO("sqlite:./galactic.db");
+				    $db = new Database();
 				    $sql = "SELECT * FROM galaxies";
 				    $result = $db->query($sql);
 				    if($result === FALSE) {
@@ -108,12 +109,13 @@ They were made from UK Schmidt plates by David Malin. -->
 					echo "Distance from Earth (light years): $i[5]</p> <br>";
 					//include "commentSection.php";
 					echo "<br><br>";
-			    } ?>
+			    } 
+				?>
 
 		</main>
 		
 		<footer>
-			<?php include 'assets/php/end.php' ?>
+			<?php include '../php/end.php' ?>
 		</footer>
 	</body>
 </html>

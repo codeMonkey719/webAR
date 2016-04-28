@@ -2,9 +2,9 @@
 // define variables and set to empty values
 //session_start();
 
-require_once "lib/passwordLib.php";
+require_once "../lib/passwordLib.php";
 
-$info = "P2";
+$info = "P3";
 //$user = $pswd = $status = "";
 
 
