@@ -62,29 +62,7 @@ They were made from UK Schmidt plates by David Malin. -->
 				</p>
 				<br><br>
 			</div>
-			<div class="center">
-				<p>Ursa Major II Dwarf</p>
-				<a href="ursamajorIIdwarf.php"><img class="gallary" src="assets/img/ursamajorIIdwarf.jpg" alt="Ursa Major II Dwarf"/></a>
-				<!-- pictures from https://www.wikipedia.org/ 
-					Credit: zimmer.csufresno.edu
-					http://zimmer.csufresno.edu/~fringwal/sro.html-->
-				<p>
-					A fixer upper!
-				</p>
-				<br><br>
-			</div>
-			<div class="center">
-				<p>Large Magellanic Cloud</p>				
-				<a href="largemagellaniccloud.php"><img class="gallary" src="assets/img/largemagellaniccloud.jpg" alt="Large Magellanic Cloud"/></a>
-				<!-- pictures from https://www.wikipedia.org/
-					Credit: NASA, ESA, and the Hubble Heritage Team 
-					(STScI/AURA)-ESA/Hubble Collaboration -
-					 HubbleSite: gallery, NewsCenter -->
-				<p>
-					Very energetic!
-				</p>
-				<br><br>
-			</div>
+			
 			<div class="center">
 				<p>Bootes I</p>
 				<a href="bootes.php"><img class="gallary" src="assets/img/bootes.jpg" alt="Bootes"/></a>
@@ -100,24 +78,10 @@ They were made from UK Schmidt plates by David Malin. -->
 				</p>
 				<br><br>
 			</div>
-			<div class="center">
-				<p>Small Magellanic Cloud</p>
-				<a href="smallmagellaniccloud.php"><img class="gallary" src="assets/img/smallmagellaniccloud.jpg" alt="Small Magellanic Cloud"/></a>
-				<!-- pictures from https://www.wikipedia.org/ 
-					Credit: NASA, ESA and A. Nota (STScI/ESA) - 
-					NASA http://www.spacetelescope.org/images/
-					html/zoomable/heic0502a.html http://antwrp.gsfc.nasa.gov/
-					apod/ap050118.html http://www.hubblesite.org/gallery/
-					album/entire/pr2005004a/ http://www.hubblesite.org/
-					newscenter/archive/releases/2005/04/image/a/ -->
-				<p>
-					Pairs great with the Large Magellanic Cloud! Adopt them both!
-				</p>
-				<br><br>
-			</div>
+			
 			<div class="center">
 				<p>Ursa Minor Dwarf</p>
-				<a href="ursaminordwarf.php"><img class="gallary" src="assets/img/ursaminordwarf.jpg" alt="Ursa Minor Dwarf"/></a>
+				<a href="ursaminordwarf.php"><img class="gallery" src="assets/img/ursaminordwarf.jpg" alt="Ursa Minor Dwarf"/></a>
 				<!-- pictures from https://www.imagejuicy.org/
 					-->
 				<p>
@@ -125,28 +89,27 @@ They were made from UK Schmidt plates by David Malin. -->
 				</p>
 				<br><br>
 			</div>
-			<div class="center">
-				<p>Draco Dwarf</p>
-				<a href="dracodwarf.php"><img class="gallary" src="assets/img/dracodwarf.jpg" alt="Draco Dwarf"/></a>
-				<!-- pictures from https://www.wikipedia.org/
-					Credit: PD-HUBBLEen:NASA, en:STScI, en:WikiSky - en:WikiSky's 
-					snapshot tool - [1] -->
-				<p>
-					Keep away from Harry!
-				</p>
-				<br><br>
-			</div>
-			<div class="center">
-				<p>NGC 2419</p>
-				<a href="ngc2419.php"><img class="gallary" src="assets/img/ngc2419.jpg" alt="NGC 2419"/></a>
-				<!-- pictures from https://www.wikipedia.org/
-					Credit: PD-HUBBLE en:NASA, en:STScI, en:WikiSky 
-					- en:WikiSky's snapshot tool - [1] -->
-				<p>
-					Tom Servo's home galaxy!
-				</p>
-				<br><br>
-			</div>
+			
+			    <?php
+				    $db = new PDO("sqlite:./galactic.db");
+				    $sql = "SELECT * FROM galaxies";
+				    $result = $db->query($sql);
+				    if($result === FALSE) {
+						//print_r(errorInfo());
+				    }
+				    $db->query($sql);
+				    foreach ($result as $i) {
+					//echo "$_FILES[file][filename]";
+				    echo "ID: $i[0]";
+					echo "<p style=\"margin-left:10px;\">Name: $i[1] <br>";
+					echo "Kind: $i[2]  <br>";
+					echo "Breed: $i[3]  <br>";
+					echo "Description: $i[4]<br>";
+					echo "Distance from Earth (light years): $i[5]</p> <br>";
+					//include "commentSection.php";
+					echo "<br><br>";
+			    } ?>
+
 		</main>
 		
 		<footer>

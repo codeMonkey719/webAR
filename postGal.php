@@ -43,7 +43,7 @@
 							//touch 
 							//$dbh->exec($sql) > ;
 							// echo $results;
-							$sql = "INSERT INTO galaxies VALUES($date, '$gname', '$imgName', '$distance');";
+							//$sql = "INSERT INTO galaxies VALUES($date, '$gname', '$gbreed', '$imgName', '$distance');";
 								//($date, '$fname', '$mname', '$lname', '$pnumber', '$email', '$user');";
 								//(1    , 'Ross',   'Smith', 'Beverage', '9702223333', 'ross@gmail.com', 'rBev');
 							$dbh->exec($sql);
@@ -59,6 +59,29 @@
 						//echo "$fname";
 					}
 				?>
+
+				<?php
+
+	try {
+		//$dbh = new PDO("sqlite:./galactic.db");
+	$sql = "SELECT * FROM galaxies;";
+	$results = $dbh->query($sql);
+	foreach($results as $i){
+		echo "The name is: $i[1]\n";
+		echo "<br>";
+	}
+	//echo "$results";
+
+	//$pets = ""
+	}catch (PDOException $e) {
+		/* If you get here it is mostly a permissions issue
+		* or that your path to the database is wrong
+		*/
+		echo 'Connection failed: ' . $e->getMessage();
+		die;
+	}	
+
+?>
 				</div>
 			</main>
 		<footer>
