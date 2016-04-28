@@ -1,6 +1,6 @@
 <?php
 try {
-	$dbh = new PDO("sqlite:./galactic.db");
+	$dbh = new PDO("sqlite:../../galactic.db");
 	//echo 'Connection successful.';
 	
 	//Creates a users table

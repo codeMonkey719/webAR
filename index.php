@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<header>
-		<?php include 'assets/php/nav.php' ?>
+		<?php include 'assets/php/navIndex.php' ?>
 		</header>
 			<main>
 			<div>

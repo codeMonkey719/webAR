@@ -144,6 +144,10 @@ main {
     float: right;
 }
 
+.iframeDiff {
+    mar
+}
+
 .left {
     margin: 1em;
     clear: top;
@@ -255,8 +259,11 @@ header {
 
 iframe{
     border: 3px grey solid;
-/*    left-margin: 50px;
-*/}
+   /* margin-left: auto;*/
+    margin left: 100px;
+    margin-right: 5px;
+    text-align: center;
+}
 
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #FF5A09;

@@ -2,9 +2,9 @@
 // define variables and set to empty values
 //session_start();
 
-require_once "lib/passwordLib.php";
+require_once "../lib/passwordLib.php";
 
-$info = "P2";
+$info = "P3";
 //$user = $pswd = $status = "";
 
 
@@ -52,7 +52,7 @@ if ($pswd != $pswd2) {
 //     echo $fname;
 // }
 
-$myfile = fopen("assets/info/users.csv", "r") or die("Unable to open file!");
+$myfile = fopen("../info/users.csv", "r") or die("Unable to open file!");
 
 while (($data = fgetcsv($myfile, 100, ",")) !== FALSE) {
     if (($data[0] == $user) && password_verify($pswd, $data[1])) { 
