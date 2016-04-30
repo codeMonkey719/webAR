@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+<?php include '../web/header.web' ?>
+<?php include '../php/config.php' ?>
+<?php include '../lib/database.php' ?>
 <html lang="en-US">
 <head>
+<?php include '../php/nav.php' ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Status Page</title>
+<link href="../css/style.css" link type="text/stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -30,11 +35,11 @@ $(document).ready(function(){
 	        success: function(result){
 		    var siteStatus = result;
 		    if (siteStatus.status == "up" ){
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="" /></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/greenFlag.png" / width=20px height=20px></tr>');
 		    } else if (siteStatus.status == "down"){
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="" /></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/yellowFlag.png" / width=20px height=20px></tr>');
 		    }else {
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="" /></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/redFlag/png" / width=20px height=20px></tr>');
 		    }
                 },
                 error: function(){
@@ -46,8 +51,8 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-    <h3 style="text-align: center">AJAX with JSON.</h3>
-    <table id='sitesTable'>
+    <h3 style="text-align: center">GNAR Status Page.</h3>
+    <table id='sitesTable' style="margin-left:auto; margin-right:auto">
         <tr>
 	    <th>Site Name</th>
 	    <th>Status</th>
