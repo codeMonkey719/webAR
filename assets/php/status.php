@@ -58,6 +58,9 @@ $(document).ready(function(){
 	    <th>Status</th>
 	</tr>
     </table>
+    <footer>
+	<?php include '../php/end.php' ?>
+    </footer>
 </body>
 </html>
 

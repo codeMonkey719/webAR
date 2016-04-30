@@ -16,6 +16,7 @@ if (isset($_SESSION["user"])) {
 	<li><a href="index.php">Home</a></li>
 	<li><a href="assets/php/fleshy.php">Galaxies</a></li>
 	<li><a href="assets/php/about.php">About</a></li>
+	<li><a href="assets/php/status.php">Status</a></li>
 	<?php if ($login != "Guest"): ?>
 	<li>Account: <a href="assets/php/account.php"> <?php echo "$login" ?></a></li>
 	<li><a href="assets/php/postGal.php">Post a Galaxy</a></li>
