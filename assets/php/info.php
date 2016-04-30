@@ -1,11 +1,11 @@
 <?php
 // define variables and set to empty values
-$info = "P1";
+$info = "P3";
 $valid = false;
 
 $name = $email = $addrs = $city = $state = $zip = "";
 
-$myfile = fopen("assets/info/account.csv", "r") or die("Unable to open file!");
+$myfile = fopen("../info/account.csv", "r") or die("Unable to open file!");
 
 while (($data = fgetcsv($myfile, 100, ",")) !== FALSE) {
     if ($data[0] == $login) {

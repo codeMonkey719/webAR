@@ -10,25 +10,25 @@ header('Content-Type: text/json');
 	$galKind = "Spiral";
 	$breed = "Husky";
 	$datePosted = "6-12-06";
-	echo "[{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"}";
+	echo "[{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
 	
 	$galName = "Canis Major Dwarf";
 	$galKind = "Irregular";
 	$breed = "Bull Terrier";
 	$datePosted = "6-13-07";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"}";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
 
 	$galName = "Sagittarius Dwarf Sphere";
 	$galKind = "Elliptical";
 	$breed = "Chinook";
 	$datePosted = "6-14-08";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"}";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
 
 	$galName = "Bootes I";
 	$galKind = "Elliptical";
 	$breed = "Chow Chow";
 	$datePosted = "6-15-09";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"}";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
 
 	$galName = "Ursa Minor Dwarf";
 	$galKind = "Spheroidal";

@@ -31,7 +31,7 @@
 				</form>
 			<div class="center">
 				<p>Milky Way</p>
-				<a href="milkyway.php"><img class="gallary" src="assets/img/milkyway.jpg" alt="Milkyway"/></a>
+				<a href="../php/milkyway.php"><img class="gallary" src="../img/milkyway.jpg" alt="Milkyway"/></a>
 				<!-- pictures from https://www.wikipedia.org/ 
 					Credit: NASA/JPL-Caltech/S. Stolovy (SSC/Caltech) - 
 					http://www.spitzer.caltech.edu/images/
@@ -43,7 +43,7 @@
 			</div>
 			<div class="center">
 				<p>Canis Major Dwarf</p>
-				<a href="canismajordwarf.php"><img class="gallary" src="assets/img/canismajordwarf.jpg" alt="Canis Major Dwarf"/></a>
+				<a href="../php/canismajordwarf.php"><img class="gallary" src="../img/canismajordwarf.jpg" alt="Canis Major Dwarf"/></a>
 				<!-- pictures from https://www.wikipedia.org/
 				Image Credit: Anglo-Australian Observatory/Royal Observatory Edinburgh.
 They were made from UK Schmidt plates by David Malin. -->
@@ -54,7 +54,7 @@ They were made from UK Schmidt plates by David Malin. -->
 			</div>
 			<div class="center">
 				<p>Sagittarius Dwarf Sphere</p>
-				<a href="sagittariusdwarfsphere.php"><img class="gallary" src="assets/img/sagittatiusdwarfsphere.jpg" alt="Sagittarius Dwarf Sphere"/></a>
+				<a href="../img/sagittariusdwarfsphere.php"><img class="gallary" src="../img/sagittatiusdwarfsphere.jpg" alt="Sagittarius Dwarf Sphere"/></a>
 				<!-- pictures from https://www.wikipedia.org/ 
 					Credit: Atlas of the Universe
 					http://www.atlasoftheuniverse.com/localgrp/s_sgrdw1.jpg-->
@@ -66,7 +66,7 @@ They were made from UK Schmidt plates by David Malin. -->
 			
 			<div class="center">
 				<p>Bootes I</p>
-				<a href="bootes.php"><img class="gallary" src="assets/img/bootes.jpg" alt="Bootes"/></a>
+				<a href="../img/bootes.php"><img class="gallary" src="../img/bootes.jpg" alt="Bootes"/></a>
 				<!-- pictures from https://www.wikipedia.org/ 
 					Credit: NGC 6334 in Scorpius, courtesy ESO/Robert Gendler
 					https://www.google.com/search?q=bootes+galaxy+cluster&biw
@@ -82,7 +82,7 @@ They were made from UK Schmidt plates by David Malin. -->
 			
 			<div class="center">
 				<p>Ursa Minor Dwarf</p>
-				<a href="ursaminordwarf.php"><img class="gallery" src="assets/img/ursaminordwarf.jpg" alt="Ursa Minor Dwarf"/></a>
+				<a href="../img/ursaminordwarf.php"><img class="gallery" src="../img/ursaminordwarf.jpg" alt="Ursa Minor Dwarf"/></a>
 				<!-- pictures from https://www.imagejuicy.org/
 					-->
 				<p>
