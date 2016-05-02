@@ -17,33 +17,35 @@ $(document).ready(function(){
 	        success: function(result){
 		    var	sites = JSON.parse(result);
 		    var thisSiteName;
-		    var thisSiteURL;
+		    var thisSiteAwakeURL;
+		    var thisSitePetsListURL;
 		    for (j = 0; j < sites.length; j++) {
 		        thisSiteName = sites[j].siteName;
-		        thisSiteURL = sites[j].awakeURL;
-		        callSites(thisSiteName,thisSiteURL);
+		        thisSiteAwakeURL = sites[j].awakeURL;
+		        thisSitePetsListURL = sites[j].petsListURL;
+		        callSites(thisSiteName,thisSiteAwakeURL,thisSitePetsListURL);
 		    }
 	        },
                 error: function(result){
 	            console.log("ERROR");
 	        }
             });
-    function callSites(siteName,siteURL){
+    function callSites(siteName,siteAwakeURL,sitePetsListURL){
         $.ajax({
-       	    url:  siteURL,
+       	    url:  siteAwakeURL,
       	    mimeType: "text/json; charset=x-user-defined",
 	        success: function(result){
 		    var siteStatus = result;
 		    if (siteStatus.status == "up" ){
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/greenFlag.png" / width=20px height=20px></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '<td>' + siteAwakeURL + '<td>' + sitePetsListURL + '</td><td><image src="../img/greenFlag.png" / width=20px height=20px></tr>');
 		    } else if (siteStatus.status == "down"){
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/yellowFlag.png" / width=20px height=20px></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '<td>' + siteAwakeURL + '<td>' + sitePetsListURL + '</td><td><image src="../img/yellowFlag.png" / width=20px height=20px></tr>');
 		    }else {
-		        $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="../img/redFlag/png" / width=20px height=20px></tr>');
+		        $('#sitesTable').append('<tr><td>' + siteName + '<td>' + siteAwakeURL + '<td>' + sitePetsListURL + '</td><td><image src="../img/redFlag.png" / width=20px height=20px></tr>');
 		    }
                 },
                 error: function(){
-	    	    $('#sitesTable').append('<tr><td>' + siteName + '</td><td><image src="error.png"');
+		        $('#sitesTable').append('<tr><td>' + siteName + '<td>' + siteAwakeURL + '<td>' + sitePetsListURL + '</td><td><image src="../img/redFlag.png" / width=20px height=20px></tr>');
 	        }  
          });
     }
@@ -55,6 +57,8 @@ $(document).ready(function(){
     <table id='sitesTable' style="margin-left:auto; margin-right:auto">
         <tr>
 	    <th>Site Name</th>
+	    <th>AwakeURL</th>
+	    <th>PetListURL</th>
 	    <th>Status</th>
 	</tr>
     </table>
