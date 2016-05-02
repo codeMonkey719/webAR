@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/json'); 
-$status = "down";
+$status = "up";
 
 $finalStatus = json_encode($status);
 echo "{\"status\":$finalStatus}";
