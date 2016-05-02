@@ -34,17 +34,22 @@ try {
 	//Creates a galaxies table
 	 $sql = "DROP TABLE IF EXISTS galaxies;";
 	 $status = $dbh->exec($sql);
-	 echo "HERE";
+	 
 	 $sql = "CREATE TABLE IF NOT EXISTS galaxies (
 	 		 gid int(50000) NOT NULL,
 	 		 galName varchar(255),
-	 		 galType varchar(255,)
+	 		 galType varchar(255),
 	 		 postDate date, 
 	 		 description text,
 	 		 dist_from_earth real(255),	 		 
 	 		 PRIMARY KEY (gid)); ";
 	$status = $dbh->exec($sql);
-
+		if($status === FALSE){
+		print_r($dbh->errorInfo());		
+	}else{
+		//echo "Done.";
+	}
+	echo "HERE";
 	//Populating the galaxies table 
 	$sql = "INSERT INTO galaxies VALUES
 			(0, 'Milky Way', 'spiral', '6-12-06', 0, 'the');
@@ -53,15 +58,7 @@ try {
 			INSERT INTO galaxies VALUES	
 			(2, 'Sagittarius Dwarf', 'Elliptical', 'sagittariusdwarf.jpg', .081);
 			INSERT INTO galaxies VALUES	
-			(3, 'Bootes I', 'bootesI.jpg', .197);
-			--INSERT INTO galaxies VALUES	
-			--(4, 'Ursa Minor Dwarf', 'ursaminordwarf.jpg', .206, 'Ursa Major 
-			--	II Dwarf (UMa II dSph) is a dwarf spheroidal galaxy situated 
-			--	in the Ursa Major constellation and discovered in 2006 in the 
-			--	data obtained by the Sloan Digital Sky Survey. The galaxy is 
-			--	located approximately 30 kpc from the Sun and moves towards 
-			--	the Sun with the velocity of about 116 km/s.');
-";
+			(3, 'Bootes I', 'bootesI.jpg', .197);";
 
 	$status = $dbh->exec($sql);
 
