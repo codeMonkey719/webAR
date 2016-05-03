@@ -65,7 +65,7 @@ They were made from UK Schmidt plates by David Malin. -->
 			</div>
 			
 			<div class="center">
-				<p>Bootes I</p>
+				<p>Boötes I</p>
 				<a href="../img/bootes.php"><img class="gallary" src="../img/bootes.jpg" alt="Bootes"/></a>
 				<!-- pictures from https://www.wikipedia.org/ 
 					Credit: NGC 6334 in Scorpius, courtesy ESO/Robert Gendler

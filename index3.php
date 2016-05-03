@@ -8,7 +8,7 @@
 
 	$(document).ready(function(){
 	    $("button").click(function(){
-	        $.ajax({url: "https://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=1", success: function(result){
+	        $.ajax({url: "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=1", success: function(result){
 	            $("#dogImage").attr("src", "data:image/png;base64," + result);
 		        }, error: function(){
 		        	alert("unsuccessful");

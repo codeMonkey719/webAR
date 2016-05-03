@@ -39,9 +39,10 @@ try {
 	 		 gid int(50000) NOT NULL,
 	 		 galName varchar(255),
 	 		 galType varchar(255),
+	 		 galBreed varchar(255),
 	 		 postDate date, 
-	 		 description text,
-	 		 dist_from_earth real(255),	 		 
+	 		 imageUrl varchar(255),
+	 		 descUrl varchar(255),	 		 
 	 		 PRIMARY KEY (gid)); ";
 	$status = $dbh->exec($sql);
 		if($status === FALSE){
@@ -52,13 +53,16 @@ try {
 	echo "HERE";
 	//Populating the galaxies table 
 	$sql = "INSERT INTO galaxies VALUES
-			(0, 'Milky Way', 'spiral', '6-12-06', 0, 'the');
+			(0, 'Milky Way', 'spiral', 'husky', '6-12-06', 0, 'the');
 			INSERT INTO galaxies VALUES			 
-			(1, 'Canis Major Dwarf', 'irregular', '6-13-07', .025);
+			(1, 'Canis Major Dwarf', 'irregular', 'Brown Lab', '6-13-07', '');
 			INSERT INTO galaxies VALUES	
-			(2, 'Sagittarius Dwarf', 'Elliptical', 'sagittariusdwarf.jpg', .081);
+			(2, 'Sagittarius Dwarf', 'Elliptical', 'Black Lab', '6-12-07','2.jpg', .081);
 			INSERT INTO galaxies VALUES	
-			(3, 'Bootes I', 'bootesI.jpg', .197);";
+			(3, 'Bootes I', 'spiral', 'Chow chow', 'bootesI.jpg', '6-12-08');
+			INSERT INTO galaxies VALUES	
+			(4, 'Ursa Minor Dwarf', 'spiral', 'Xoloitzcuintli', 'ursaminordwarf.jpg');
+			";
 
 	$status = $dbh->exec($sql);
 

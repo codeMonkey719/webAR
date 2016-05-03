@@ -10,31 +10,46 @@ header('Content-Type: text/json');
 	$galKind = "Spiral";
 	$breed = "Husky";
 	$datePosted = "6-12-06";
-	echo "[{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
+	$gid = 0;
+	$imageUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=0";
+	$descUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getDesc.php?petId=0";
+	echo "[{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\", \"imageURL\":\"$imageUrl\", \"petId\":\"$gid\", \"descURL\":\"$descUrl\"},";
 	
 	$galName = "Canis Major Dwarf";
 	$galKind = "Irregular";
 	$breed = "Bull Terrier";
 	$datePosted = "6-13-07";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
+	$gid = 1;
+	$imageUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=1";
+	$descUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getDesc.php?petId=1";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\", \"imageURL\":\"$imageUrl\", \"petId\":\"$gid\", \"descURL\":\"$descUrl\"},";
 
 	$galName = "Sagittarius Dwarf Sphere";
 	$galKind = "Elliptical";
 	$breed = "Chinook";
 	$datePosted = "6-14-08";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
+	$gid = 2;
+	$imageUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=2";
+	$descUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getDesc.php?petId=2";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\", \"imageURL\":\"$imageUrl\", \"petId\":\"$gid\", \"descURL\":\"$descUrl\"},";
 
 	$galName = "Bootes I";
 	$galKind = "Elliptical";
 	$breed = "Chow Chow";
 	$datePosted = "6-15-09";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"},";
+	$gid = 3;
+	$imageURL = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=3";
+	$descUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getDesc.php?petId=3";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\", \"imageURL\":\"$imageUrl\", \"petId\":\"$gid\", \"descURL\":\"$descUrl\"},";
 
 	$galName = "Ursa Minor Dwarf";
 	$galKind = "Spheroidal";
 	$breed = "Xoloitzcuintli";
 	$datePosted = "6-16-10";
-	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\"}]";
+	$gid = 0;
+	$imageUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getImage.php?petId=4";
+	$descUrl = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/php/getDesc.php?petId=4";
+	echo "{\"petName\":\"$galName\",\"petKind\":\"$galKind\",\"breed\":\"$breed\",\"datePosted\":\"$datePosted\", \"imageURL\":\"$imageUrl\", \"petId\":\"$gid\", \"descURL\":\"$descUrl\"},";
 
 
 	// try {

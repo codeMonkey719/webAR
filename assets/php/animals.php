@@ -13,7 +13,7 @@ include ("navBar.php");
     <h2>Welcome to the Animals Page!</h2>
     <h3>Here is our current listing of available animals who need a home!</h3>
     <form action ="" method = "post"<br>
-	    <input type="text" size=50>
+	        <input type="text" size=50>
             <input type="hidden" name="search">
             <input type="submit" value="Search"><br><br>
     </form>
