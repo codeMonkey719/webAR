@@ -3,7 +3,7 @@
 class Database extends PDO{
 	
 	public function __construct(){
-		parent::__construct("sqlite:" . __DIR__ . "/../galactic.db");
+		parent::__construct("sqlite:" . __DIR__ . "./galactic.db");
 	}
 	
 	public function getNumberOfImages(){

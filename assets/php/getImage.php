@@ -1,13 +1,23 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+include 'createdb.php';
 //$id = $pe
 //$sql = "SELECT * FROM galaxies WHERE gid = $petId"
-$id = htmlspecialchars($_GET["petId"]);
-$name = "http://www.cs.colostate.edu/~alsryan/ct310/galactic/assets/img/$id.jpg";
-//echo "$petId";
-echo "$name";
+//$id = $_GET["petId"];
 
-$str = file_get_contents($name, FILE_USE_INCLUDE_PATH);
-echo base64_encode($str);
+$db = new Database();
+$sql = "SELECT gid FROM galaxies WHERE gid = '$id'";
+$result = $db->query($sql);
+// if($result === FALSE) {
+// 	print_r(errorInfo());
+// }
+$finId = $db->fetchColumn();
+
+$name = "../img/$finId.jpg";
+echo $name;
+
+echo base64_encode($name);
+
+
 exit;
 ?>

@@ -12,12 +12,13 @@
 <link href="../css/style.css" link type="text/stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
+//var sites;
 $(document).ready(function(){
         $.ajax({
             url:"https://www.cs.colostate.edu/~ct310/yr2016sp/more_assignments/project03masterlist.php",
             mimeType: "text/plain; charset=x-user-defined",
 	        success: function(result){
-		    var	sites = JSON.parse(result);
+		    	sites = JSON.parse(result);
 		    var thisSiteName;
 		    var thisSiteAwakeURL;
 		    var thisSitePetsListURL;

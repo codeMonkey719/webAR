@@ -328,6 +328,10 @@ pre code {
     border: none;
 }
 
+table{
+    font-size: 50%;
+}
+
 ul {
     font-family: 'Indie Flower', cursive;
 }

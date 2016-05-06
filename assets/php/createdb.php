@@ -42,7 +42,8 @@ try {
 	 		 galBreed varchar(255),
 	 		 postDate date, 
 	 		 imageUrl varchar(255),
-	 		 descUrl varchar(255),	 		 
+	 		 descUrl varchar(255),
+	 		 description text,	 		 
 	 		 PRIMARY KEY (gid)); ";
 	$status = $dbh->exec($sql);
 		if($status === FALSE){
@@ -50,18 +51,32 @@ try {
 	}else{
 		//echo "Done.";
 	}
-	echo "HERE";
+	//echo "HERE";
 	//Populating the galaxies table 
 	$sql = "INSERT INTO galaxies VALUES
-			(0, 'Milky Way', 'spiral', 'husky', '6-12-06', 0, 'the');
+			(0, 'Milky Way', 'spiral', 'husky', '6-12-06','../img/0.jpg', '../php/0.php', 'The Milky Way 
+				is the galaxy that contains our Solar System. Its name milky is derived from its appearance 
+				as a dim glowing band arching across the night sky whose individual stars cannot be distinguished 
+				by the naked eye.');
 			INSERT INTO galaxies VALUES			 
-			(1, 'Canis Major Dwarf', 'irregular', 'Brown Lab', '6-13-07', '');
+			(1, 'Canis Major Dwarf', 'irregular', 'Brown Lab', '6-13-07', '../img/0.jpg', '../php/1.php', 'The Canis 
+				Major Dwarf Galaxy or Canis Major Overdensity is a disputed dwarf irregular galaxy in the Local Group, 
+				located in the same part of the sky as the constellation Canis Major.');
 			INSERT INTO galaxies VALUES	
-			(2, 'Sagittarius Dwarf', 'Elliptical', 'Black Lab', '6-12-07','2.jpg', .081);
+			(2, 'Sagittarius Dwarf', 'Elliptical', 'Black Lab', '6-12-08','../img/0.jpg', '../php/2.php','The Sagittarius 
+				Dwarf Spheroidal Galaxy (Sgr dSph), also known as the Sagittarius Dwarf Elliptical Galaxy (Sgr dE or Sag DEG), 
+				is an elliptical loop-shaped satellite galaxy of the Milky Way. It consists of four globular clusters, the 
+				main cluster having been discovered in 1994. Sgr dSph is roughly 10,000 light-years in diameter, and is 
+				currently about 70,000 light-years from Earth, travelling in a polar orbit (i.e. an orbit passing over the 
+					Milky Way’s galactic poles) at a distance of about 50,000 light-years from the core of the Milky Way.');
 			INSERT INTO galaxies VALUES	
-			(3, 'Bootes I', 'spiral', 'Chow chow', 'bootesI.jpg', '6-12-08');
+			(3, 'Bootes I', 'spiral', 'Chow chow',  '6-12-09', '../img/0.jpg', '../php/3.php', 'The Boötes Dwarf Galaxy is 
+				a galaxy, which appears faint, with a luminosity of 100,000 L☉ and an absolute magnitude of –5.8. It lies 
+				about 197 thousand light-years away in the constellation Boötes.');
 			INSERT INTO galaxies VALUES	
-			(4, 'Ursa Minor Dwarf', 'spiral', 'Xoloitzcuintli', 'ursaminordwarf.jpg');
+			(4, 'Ursa Minor Dwarf', 'spiral', 'Xoloitzcuintli', '6-12-10', '../img/0.jpg', '../php/4.php', 'The Ursa Minor 
+				Dwarf dwarf spheroidal galaxy was discovered by A.G. Wilson of the Lowell Observatory in the Palomar Sky 
+				Survey in 1955. It is part of the Ursa Minor constellation, and a satellite galaxy to the Milky Way.');
 			";
 
 	$status = $dbh->exec($sql);

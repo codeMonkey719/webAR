@@ -10,6 +10,7 @@ if (isset($_SESSION["user"])) {
 <li><a href="#top">Top</a></li>
 <li><a href="fleshy.php">Galaxies</a></li>
 <li><a href="about.php">About</a></li>
+<li><a href="../php/status.php">Status</a></li>
 <?php if ($login != "Guest"): ?>
 <li><a href="assets/php/logout.php">Logout</a></li>
 <?php else: ?>
