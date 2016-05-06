@@ -4,6 +4,7 @@
 <?php include '../lib/database.php' ?>
 <html lang="en-US">
 <head>
+<meta http-equiv="refresh" content="3">
 <?php include '../php/nav.php' ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Status Page</title>
